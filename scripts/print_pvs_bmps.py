@@ -8,7 +8,7 @@ def print_pvs_bpms():
     bpms = lat.get_elements('BPM')
     print 'The pvs for each bpm in the lattice are:'
     for bpm in bpms:
-        print bpm.get_pv_name('x')[0], bpm.get_pv_name('y')[0]
+        print bpm.get_pv_name('x')[0], bpm.get_pv_name('y')[0], 'S position:', lat.get_s(bpm)
 
 def main():
     print_pvs_bpms()
