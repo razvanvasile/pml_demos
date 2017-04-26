@@ -6,7 +6,7 @@ import pml.load_csv
 
 def print_pv_names(elements, lattice):
     for element in elements:
-        print element.get_pv_name('b1', 'readback'), "Position s =", lattice.get_s(element)
+        print element.get_pv_name('b1', 'readback')
 
 
 def main():
@@ -17,17 +17,11 @@ def main():
     q2d = lattice.get_elements('Q2D')
     q3b = lattice.get_elements('Q3B')
     q3d = lattice.get_elements('Q3D')
-    print "Q1B pvs:"
     print_pv_names(q1b, lattice)
-    print "Q1D pvs:"
     print_pv_names(q1d, lattice)
-    print "Q2B pvs:"
     print_pv_names(q2b, lattice)
-    print "Q2D pvs:"
     print_pv_names(q2d, lattice)
-    print "Q3B pvs:"
     print_pv_names(q3b, lattice)
-    print "Q3D pvs:"
     print_pv_names(q3d, lattice)
 
 
