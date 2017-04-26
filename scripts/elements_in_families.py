@@ -5,8 +5,9 @@ import pml.load_csv
 
 
 def print_pv_names(elements, lattice):
-    for element in elements:
-        print element.get_pv_name('b1', 'readback')
+    with open('elements_in_families.txt', 'a') as out_file:
+        for element in elements:
+            out_file.write("{}\n".format(element.get_pv_name('b1', 'readback')))
 
 
 def main():
